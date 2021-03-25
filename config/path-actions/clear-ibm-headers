@@ -1,0 +1,13 @@
+# IBM FIREWALL RULES THAT WILL ALWAYS BE THERE
+more_clear_headers "server";
+more_clear_headers "Server";
+more_clear_headers "x-destination";
+more_clear_headers "X-Destination";
+more_clear_headers "x-powered-by";
+more_clear_headers "X-Powered-By";
+more_clear_headers "access-control-*";
+more_clear_headers "Access-Control-*";
+more_clear_headers "x-request-id";
+more_clear_headers "X-Request-Id";
+
+more_set_headers "x-powered-by: Felipe Zuntini";

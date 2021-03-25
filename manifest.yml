@@ -1,0 +1,11 @@
+---
+applications:
+- name: cf-tutorial-gateway
+  routes:
+  - route: cf-tutorial.mybluemix.net
+  no-route: false
+  buildpacks:
+  - https://github.com/cloudfoundry/nginx-buildpack.git
+  memory: 32M
+  disk_quota: 32M
+  path: .

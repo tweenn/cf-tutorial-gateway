@@ -1,0 +1,16 @@
+services:
+  cf_tutorial_gateway:
+    image: openresty/openresty:latest-alpine
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "4040:8080"
+    networks:
+      - tutorial-net
+    volumes:
+      - ./:/usr/local/openresty/nginx/conf/
+      - ./container/openresty:/var/run/openresty/
+
+networks:
+  tutorial-net:
+    driver: bridge
